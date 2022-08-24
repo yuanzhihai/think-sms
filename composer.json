@@ -1,0 +1,38 @@
+{
+  "name": "yzh52521/think-sms",
+  "description": "The ThinkPHP SMS package.",
+  "license": "MIT",
+  "support": {
+    "issues": "https://github.com/yzh52521/think-sms/issues",
+    "source": "https://github.com/yzh52521/think-sms"
+  },
+  "authors": [
+    {
+      "name": "yzh52521",
+      "email": "396751927@qq.com"
+    }
+  ],
+  "require": {
+    "php": "^7.3|^8.0",
+    "topthink/framework": "^6.0.0",
+    "overtrue/easy-sms": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "yzh52521\\sms\\": "src"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "extra": {
+    "think": {
+      "services": [
+        "yzh52521\\sms\\Service"
+      ],
+      "config":{
+        "sms": "config/sms.php"
+      }
+    }
+  }
+}
