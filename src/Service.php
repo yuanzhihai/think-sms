@@ -18,7 +18,7 @@ class Service extends \think\Service
      */
     public function register()
     {
-        $this->app->bind(EasySms::class, function () {
+        $this->app->bind('Easysms', function () {
             return new EasySms($this->app->config->get('sms'));
         });
     }

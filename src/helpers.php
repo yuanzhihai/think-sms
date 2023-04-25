@@ -8,7 +8,7 @@ use Overtrue\EasySms\Exceptions\InvalidArgumentException;
 if (!function_exists('sms')) {
     /**
      * 发送短信
-     * @return array|EasySms
+     * @return array
      * @throws InvalidArgumentException
      * @throws NoGatewayAvailableException
      */
@@ -16,10 +16,10 @@ if (!function_exists('sms')) {
     {
         $arguments = func_get_args();
         /** @var EasySms $sms */
-        $sms = app(EasySms::class);
+        $sms = app()->sms;
         if (empty($arguments)) {
             return $sms;
         }
-        return $sms->send($arguments[0], $arguments[1]);
+        return $sms->send($arguments[0], $arguments[1],$arguments[2]);
     }
 }
