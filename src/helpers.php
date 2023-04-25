@@ -16,7 +16,7 @@ if (!function_exists('sms')) {
     {
         $arguments = func_get_args();
         /** @var EasySms $sms */
-        $sms = app()->sms;
+        $sms = app('Easysms');
         if (empty($arguments)) {
             return $sms;
         }
