@@ -20,6 +20,6 @@ if (!function_exists('sms')) {
         if (empty($arguments)) {
             return $sms;
         }
-        return $sms->send($arguments[0], $arguments[1],$arguments[2]);
+        return $sms->send($arguments[0], $arguments[1],$arguments[2]??[]);
     }
 }
